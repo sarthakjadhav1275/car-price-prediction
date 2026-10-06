@@ -1,0 +1,145 @@
+{
+  "app_config": {
+    "title": "AutoValuate AI",
+    "tagline": "Machine Learning Car Valuation Engine",
+    "currency": "INR",
+    "currency_symbol": "₹",
+    "api_base_url": "http://127.0.0.1:8000"
+  },
+  "form_fields": {
+    "brand": {
+      "type": "select",
+      "label": "Brand / Manufacturer",
+      "default": "Hyundai",
+      "options": [
+        "Ambassador", "Audi", "Bmw", "Chevrolet", "Daewoo", "Datsun", "Fiat",
+        "Force", "Ford", "Honda", "Hyundai", "Isuzu", "Jaguar", "Jeep", "Kia",
+        "Land", "Mahindra", "Maruti", "Mercedes-Benz", "Mg", "Mitsubishi",
+        "Nissan", "Opelcorsa", "Renault", "Skoda", "Tata", "Toyota", "Volkswagen", "Volvo"
+      ]
+    },
+    "fuel": {
+      "type": "pills",
+      "label": "Fuel Type",
+      "default": "Diesel",
+      "options": ["Diesel", "Petrol", "CNG", "LPG", "Electric"]
+    },
+    "transmission": {
+      "type": "segmented_control",
+      "label": "Transmission",
+      "default": "Manual",
+      "options": ["Manual", "Automatic"]
+    },
+    "seller_type": {
+      "type": "select",
+      "label": "Seller Channel",
+      "default": "Individual",
+      "options": ["Individual", "Dealer", "Trustmark Dealer"]
+    },
+    "owner": {
+      "type": "select",
+      "label": "Ownership History",
+      "default": "First Owner",
+      "options": [
+        "First Owner",
+        "Second Owner",
+        "Third Owner",
+        "Fourth & Above Owner",
+        "Test Drive Car"
+      ]
+    },
+    "car_age": {
+      "type": "slider",
+      "label": "Vehicle Age",
+      "unit": "Years",
+      "min": 0,
+      "max": 25,
+      "default": 4,
+      "step": 1
+    },
+    "km_driven": {
+      "type": "slider",
+      "label": "Kilometres Driven",
+      "unit": "km",
+      "min": 500,
+      "max": 200000,
+      "default": 35000,
+      "step": 1000,
+      "presets": [15000, 35000, 60000, 100000]
+    }
+  },
+  "mock_prediction_response": {
+    "success": true,
+    "predicted_price": 1168468,
+    "formatted_price": "₹11.68 Lakh",
+    "price_inr": "₹1,168,468",
+    "range_low": 1080833,
+    "range_high": 1256103,
+    "range_low_formatted": "₹10.81 Lakh",
+    "range_high_formatted": "₹12.56 Lakh",
+    "range_text": "₹10.81 Lakh – ₹12.56 Lakh",
+    "depreciation_pct": 34.0,
+    "km_per_year": 8750,
+    "best_model": "Linear Regression",
+    "market_demand": "High Demand",
+    "insights": [
+      {
+        "icon": "⚡",
+        "title": "Brand Pricing Factor",
+        "description": "Hyundai enjoys active resale liquidity with steady market valuation."
+      },
+      {
+        "icon": "⛽",
+        "title": "Fuel Economy Impact",
+        "description": "Diesel powertrain paired with Manual transmission."
+      },
+      {
+        "icon": "⏱️",
+        "title": "Odometer & Age Correlation",
+        "description": "4 years old with 35,000 km on the odometer."
+      }
+    ]
+  },
+  "mock_benchmarks": [
+    {
+      "model": "Linear Regression",
+      "test_r2": 0.6978,
+      "cv_r2": 0.6737,
+      "mae": 123637.21,
+      "rmse": 206675.74,
+      "is_active": true
+    },
+    {
+      "model": "Ridge Regression",
+      "test_r2": 0.6833,
+      "cv_r2": 0.6882,
+      "mae": 125466.29,
+      "rmse": 211550.86,
+      "is_active": false
+    },
+    {
+      "model": "Gradient Boosting",
+      "test_r2": 0.6524,
+      "cv_r2": 0.6864,
+      "mae": 124831.51,
+      "rmse": 221655.93,
+      "is_active": false
+    },
+    {
+      "model": "Random Forest (Tuned)",
+      "test_r2": 0.5656,
+      "cv_r2": 0.6084,
+      "mae": 137840.02,
+      "rmse": 247765.86,
+      "is_active": false
+    },
+    {
+      "model": "Decision Tree",
+      "test_r2": 0.5405,
+      "cv_r2": 0.5844,
+      "mae": 139512.02,
+      "rmse": 254839.15,
+      "is_active": false
+    }
+  ]
+}

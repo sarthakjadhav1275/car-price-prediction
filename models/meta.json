@@ -1,0 +1,95 @@
+{
+  "best_model": "Linear Regression",
+  "numeric": [
+    "km_driven",
+    "car_age",
+    "km_per_year"
+  ],
+  "categorical": [
+    "brand",
+    "fuel",
+    "seller_type",
+    "transmission",
+    "owner"
+  ],
+  "choices": {
+    "brand": [
+      "Ambassador",
+      "Audi",
+      "Bmw",
+      "Chevrolet",
+      "Daewoo",
+      "Datsun",
+      "Fiat",
+      "Force",
+      "Ford",
+      "Honda",
+      "Hyundai",
+      "Isuzu",
+      "Jaguar",
+      "Jeep",
+      "Kia",
+      "Land",
+      "Mahindra",
+      "Maruti",
+      "Mercedes-Benz",
+      "Mg",
+      "Mitsubishi",
+      "Nissan",
+      "Opelcorsa",
+      "Renault",
+      "Skoda",
+      "Tata",
+      "Toyota",
+      "Volkswagen",
+      "Volvo"
+    ],
+    "fuel": [
+      "CNG",
+      "Diesel",
+      "Electric",
+      "LPG",
+      "Petrol"
+    ],
+    "seller_type": [
+      "Dealer",
+      "Individual",
+      "Trustmark Dealer"
+    ],
+    "transmission": [
+      "Automatic",
+      "Manual"
+    ],
+    "owner": [
+      "First Owner",
+      "Fourth & Above Owner",
+      "Second Owner",
+      "Test Drive Car",
+      "Third Owner"
+    ]
+  },
+  "ranges": {
+    "km_driven": [
+      0,
+      223000
+    ],
+    "car_age": [
+      0,
+      34
+    ],
+    "km_per_year": [
+      0,
+      20000
+    ]
+  },
+  "feature_importances": {
+    "km_driven": 0.0025,
+    "car_age": 0.4837,
+    "km_per_year": 0.0004,
+    "brand": 0.4467,
+    "fuel": 0.1662,
+    "seller_type": 0.0092,
+    "transmission": 0.0696,
+    "owner": 0.0009
+  }
+}
